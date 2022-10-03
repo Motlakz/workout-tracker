@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Nunito';
+    margin: 0 auto;
+    padding: 0;
+}
+.tracker {
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 750px;
+}
+.tracker th {
+    text-align: left;
+    color: rgb(69, 211, 192);
+    background: rgb(179, 7, 247);
+}
+.tracker th,
+.tracker td {
+    padding: 12px;
+}
+.tracker-entries .tracker-row {
+   background: #eee; 
+}
+.tracker-entries .tracker-row:nth-child(odd) {
+    background: #808080;
+}
+.tracker-date,
+.tracker-workout,
+.tracker-duration {
+    background: aliceblue;
+    border: 2px dotted rgb(88, 173, 88);
+    display: inline-block;
+    height: 2.5em;
+}
+.tracker-duration {
+    width: 50px;
+}
+.tracker-button {
+    background: rgb(69, 211, 192);
+    border: 2px solid rgb(88, 173, 88);
+    color:rgb(179, 7, 247);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.tracker-button:hover,
+.tracker-add:hover {
+    background-color: #ddd;
+}
+.tracker-row-add {
+    border-top: 3px double #333;
+    border-bottom: 3px double #333;
+    background: aliceblue;
+}
+.tracker-row-add td {
+    text-align: right;
+}
+.tracker-add {
+    border: 2px solid rgb(88, 173, 88);
+    border-radius: 10px;
+    background:rgb(69, 211, 192);
+    color: rgb(179, 7, 247);
+    display: inline-block;
+    font-weight: 800;
+    padding: 8px;
+    cursor: pointer;
+}
+
