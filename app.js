@@ -1,4 +1,6 @@
 export default class WorkoutTracker {
+static LOCAL_STORAGE_DATA_KEY = "workout-tracker-entries";
+
     constructor(root) {
         this.root = root;
         this.root.insertAdjacentHTML("afterbegin", WorkoutTracker.html());
@@ -67,7 +69,7 @@ export default class WorkoutTracker {
     }
 
     loadEntries() {
-        this.entries = JSON.parse(localStorage.getItem("workout-tracker-entries")  || "[]");
+        this.entries = JSON.parse(localStorage.getItem(WorkoutTracker.LOCAL_STORAGE_DATA_KEY)  || "[]"); // Keeps code free from repetition
     }
     saveEntries() {
         localStorage.setItem("workout-tracker-entries", JSON.stringify(this.entries));
@@ -96,6 +98,10 @@ export default class WorkoutTracker {
             row.querySelector(".tracker-duration").addEventListener("change", ({target}) => {
                 data.date = target.value;
                 this.saveEntries();
+            });
+
+            row.querySelector(".tracker-button").addEventListener("click", () => {
+                this.deleteEntry(data);
             });
 
             tableBody.appendChild(row);
