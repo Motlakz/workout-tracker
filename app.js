@@ -23,7 +23,7 @@ static LOCAL_STORAGE_DATA_KEY = "workout-tracker-entries";
         });
     }
     static html() {
-        return `<table class="tracker" style="width: 100vw;">
+        return `<table class="tracker">
         <thead>
             <tr>
                 <th>Date</th>
